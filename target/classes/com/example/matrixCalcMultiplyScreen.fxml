@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane fx:controller="com.example.MainScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" styleClass="AdditionScreen" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#333333" layoutX="278.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiplication" textAlignment="CENTER" wrappingWidth="254.39993896484378">
+         <font>
+            <Font name="Eras Bold ITC" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="rows1Input" layoutX="47.0" layoutY="116.0" prefHeight="25.0" prefWidth="31.0" />
+      <TextField fx:id="columns1Input" layoutX="193.0" layoutY="116.0" prefHeight="25.0" prefWidth="31.0" />
+      <Text fill="#333333" layoutX="66.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Eras; -fx-font-size: 12; -fx-font-weight: Bold;" text="Matrix 1 Dimensions" textAlignment="CENTER" wrappingWidth="136.81365966796875">
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="31.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rows" textAlignment="CENTER" wrappingWidth="62.13671875">
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="177.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Columns" textAlignment="CENTER" wrappingWidth="62.13671875">
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="82.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #4A90E2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: Bold;" text="Create Matrices" textAlignment="CENTER" textFill="WHITE" onAction="#dualMatrixCreation"/>
+      <GridPane fx:id="matrixGrid1" alignment="CENTER" layoutX="320.0" layoutY="95.0" prefHeight="91.0" prefWidth="104.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
+          <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+      </GridPane>
+      <Button layoutX="532.0" layoutY="428.0" mnemonicParsing="false" style="-fx-background-color: #4A90E2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: Bold;" text="Calculate" textFill="WHITE" onAction = "#submitMultiply"/>
+      <MenuButton layoutX="22.0" layoutY="16.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #4a90e2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD ITC;" text="Matrix Operations" textAlignment="CENTER" textFill="WHITE">
+        <items>
+            <MenuItem fx:id="addMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Add Matricies" onAction = "#switchToAddition" />
+            <MenuItem fx:id="subtractMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Subtract Matricies" onAction = "#switchToSubtraction" />
+            <MenuItem fx:id="multiplyMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Multiply Matricies"/>
+            <MenuItem fx:id="transposeMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Transpose Matrix" onAction = "#switchToTranspose" />
+            <MenuItem fx:id="invertMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Inverse of Matrix" onAction = "#switchToInverse"/>
+            <MenuItem fx:id="calculateDeterminantMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Determinant of Matrix" onAction = "#switchToDeterminant"/>
+
+        </items>
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </MenuButton>
+      <Text fill="#333333" layoutX="65.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Eras; -fx-font-size: 12; -fx-font-weight: Bold;" text="Matrix 2 Dimensions" textAlignment="CENTER" wrappingWidth="136.81365966796875">
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="rows2Input" layoutX="46.0" layoutY="234.0" prefHeight="25.0" prefWidth="31.0" />
+      <TextField fx:id="columns2Input" layoutX="192.0" layoutY="234.0" prefHeight="25.0" prefWidth="31.0" />
+      <Text fill="#333333" layoutX="30.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rows" textAlignment="CENTER" wrappingWidth="62.13671875">
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="176.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Columns" textAlignment="CENTER" wrappingWidth="62.13671875">
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </Text>
+      <GridPane fx:id="matrixGrid2" alignment="CENTER" layoutX="320.0" layoutY="295.0" prefHeight="91.0" prefWidth="104.0">
+         <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
+          <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</Pane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane fx:controller="com.example.MainScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" styleClass="AdditionScreen" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#333333" layoutX="278.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matrix Calculator " textAlignment="CENTER" wrappingWidth="254.39993896484378">
+         <font>
+            <Font name="Eras Bold ITC" size="24.0" />
+         </font>
+      </Text>
+      <MenuButton layoutX="22.0" layoutY="16.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #4a90e2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD ITC;" text="Matrix Operations" textAlignment="CENTER" textFill="WHITE">
+        <items>
+         <MenuItem fx:id="addMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Add Matricies" onAction="#switchToAddition"/>
+          <MenuItem fx:id="subtractMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Subtract Matricies" onAction = "#switchToSubtraction" />
+          <MenuItem fx:id="multiplyMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Multiply Matricies" onAction = "#switchToMultiply" />
+          <MenuItem fx:id="transposeMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Transpose Matrix" onAction = "#switchToTranspose" />
+          <MenuItem fx:id="invertMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Inverse of Matrix" onAction = "#switchToInverse"/>
+          <MenuItem fx:id="calculateDeterminantMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Determinant of Matrix" onAction = "#switchToDeterminant"/>
+        </items>
+         <font>
+            <Font name="Eras Bold ITC" size="12.0" />
+         </font>
+      </MenuButton>
+      <Text fill="#333333" layoutX="112.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Charlie McEwen's Matrix Calculator. On the left, there is a drop down menu you can select of various matrix operations. If you notice any issues, feel free to contact me at cmcewen2017@gmail.com. Thank you and enjoy! " textAlignment="CENTER" wrappingWidth="416.7999633789063">
+         <font>
+            <Font name="Eras Bold ITC" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
