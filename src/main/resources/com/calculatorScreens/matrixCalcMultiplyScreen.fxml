@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<Pane fx:controller="com.example.MainScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" styleClass="AdditionScreen" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="com.calculatorScreens.MainScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" styleClass="AdditionScreen" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text fill="#333333" layoutX="278.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiplication" textAlignment="CENTER" wrappingWidth="254.39993896484378">
          <font>

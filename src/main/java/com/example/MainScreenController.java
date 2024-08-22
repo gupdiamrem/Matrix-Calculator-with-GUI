@@ -197,7 +197,7 @@ public class MainScreenController {
     public void showResultWindow(double[][] result) {
         try {
             // Load the FXML file for the new window
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/resultWindow.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/calculatorScreens/resultWindow.fxml"));
             Parent root = loader.load();
 
             // Get the controller instance from the loader
@@ -222,7 +222,7 @@ public class MainScreenController {
     public void showErrorWindow(int errorCode) {
         try {
             // Load the FXML file for the new window
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/errorWindow.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/calculatorScreens/errorWindow.fxml"));
             Parent root = loader.load();
 
             // Get the controller instance from the loader

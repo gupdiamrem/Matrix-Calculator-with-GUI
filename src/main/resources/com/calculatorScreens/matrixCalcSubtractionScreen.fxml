@@ -12,9 +12,9 @@
 <?import javafx.scene.text.Text?>
 
 
-<Pane fx:controller="com.example.MainScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" styleClass="AdditionScreen" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="com.calculatorScreens.MainScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" styleClass="AdditionScreen" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text fill="#333333" layoutX="278.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Addition" textAlignment="CENTER" wrappingWidth="254.39993896484378">
+      <Text fill="#333333" layoutX="278.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtraction" textAlignment="CENTER" wrappingWidth="254.39993896484378">
          <font>
             <Font name="Eras Bold ITC" size="24.0" />
          </font>
@@ -38,7 +38,7 @@
       </Text>
       <Button layoutX="82.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #4A90E2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: Bold;" text="Create Matrices" textAlignment="CENTER" textFill="WHITE" onAction="#dualMatrixCreation"/>
       <GridPane fx:id="matrixGrid1" alignment="CENTER" layoutX="320.0" layoutY="95.0" prefHeight="91.0" prefWidth="104.0">
-        <columnConstraints>
+         <columnConstraints>
           <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
           <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
         </columnConstraints>
@@ -48,15 +48,16 @@
           <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
         </rowConstraints>
       </GridPane>
-      <Button layoutX="532.0" layoutY="428.0" mnemonicParsing="false" style="-fx-background-color: #4A90E2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: Bold;" text="Calculate" textFill="WHITE" onAction = "#submitAddition"/>
+      <Button layoutX="532.0" layoutY="428.0" mnemonicParsing="false" style="-fx-background-color: #4A90E2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: Bold;" text="Calculate" textFill="WHITE" onAction = "#submitSubtraction"/>
       <MenuButton layoutX="22.0" layoutY="16.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #4a90e2; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD ITC;" text="Matrix Operations" textAlignment="CENTER" textFill="WHITE">
         <items>
-            <MenuItem fx:id="addMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Add Matricies"  />
-            <MenuItem fx:id="subtractMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Subtract Matricies" onAction = "#switchToSubtraction" />
+            <MenuItem fx:id="addMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Add Matricies" onAction = "#switchToAddition" />
+            <MenuItem fx:id="subtractMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Subtract Matricies" />
             <MenuItem fx:id="multiplyMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Multiply Matricies" onAction = "#switchToMultiply"/>
             <MenuItem fx:id="transposeMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Transpose Matrix" onAction = "#switchToTranspose" />
             <MenuItem fx:id="invertMatricesMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Inverse of Matrix" onAction = "#switchToInverse"/>
             <MenuItem fx:id="calculateDeterminantMenuItem" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-font-family: Eras; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Determinant of Matrix" onAction = "#switchToDeterminant"/>
+
         </items>
          <font>
             <Font name="Eras Bold ITC" size="12.0" />
@@ -80,7 +81,7 @@
          </font>
       </Text>
       <GridPane fx:id="matrixGrid2" alignment="CENTER" layoutX="320.0" layoutY="295.0" prefHeight="91.0" prefWidth="104.0">
-         <columnConstraints>
+          <columnConstraints>
           <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
           <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="40.0" />
         </columnConstraints>

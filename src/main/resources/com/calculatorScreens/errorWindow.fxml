@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<Pane fx:controller="com.example.ErrorWindowController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="400.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="com.calculatorScreens.ErrorWindowController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="400.0" style="-fx-background-color: #E0E0E0; -fx-border-color: white; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text fill="#333333" layoutX="158.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" textAlignment="CENTER" wrappingWidth="91.99997558593753">
          <font>
