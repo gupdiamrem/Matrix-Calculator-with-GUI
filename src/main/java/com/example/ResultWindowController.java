@@ -18,6 +18,9 @@ public class ResultWindowController {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 TextField textField = new TextField(String.valueOf(resultMatrix[i][j]));
+                textField.setMaxWidth(40); // Prevents horizontal stretching
+                textField.setPrefWidth(40);
+                textField.setMinWidth(40);
                 textField.setEditable(false); // Make the result fields non-editable
                 resultGrid.add(textField, j, i);
             }
